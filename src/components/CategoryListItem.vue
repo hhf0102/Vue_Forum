@@ -1,6 +1,6 @@
 <template>
   <div class="card mb-3">
-    <div class="card-header bg-primary text-white">
+    <div class="card-header">
       <router-link :to="{name: 'PageCategory', params: {id: this.category['.key']}}">{{category.name}}</router-link>
     </div>
     <ForumList :forums="forums"/>
@@ -32,8 +32,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a {
-  text-decoration: none;
-  color: white;
-}
+
 </style>

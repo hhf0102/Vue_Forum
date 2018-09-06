@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="title mb-3">
-      <label for="title">Title:</label>
+      <label for="title" class="mb-2">Title:</label>
       <br>
       <input id="title" type="text" autocomplete="off" v-model="title">
     </div>
     <div class="content mb-4">
-      <label for="content">Content:</label>
+      <label for="content" class="mb-2">Content:</label>
       <br>
       <textarea id="content" cols="30" rows="10" v-model="text"></textarea>
     </div>
@@ -58,11 +58,11 @@ export default {
 }
 .content {
   > textarea {
-    width: 100%;
-    outline: none;
-    padding: 10px 10px;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 5px;
+    // width: 100%;
+    // outline: none;
+    // padding: 10px 10px;
+    // border: 1px solid rgba(0, 0, 0, .2);
+    // border-radius: 5px;
   }
 }
 .btns {

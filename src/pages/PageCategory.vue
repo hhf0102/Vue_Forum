@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>{{category.name}}</h1>
+  <div class="s_pageCategory">
+    <h1 class="mb-3">{{category.name}}</h1>
     <CategoryListItem :category="category"/>
   </div>
 </template>
@@ -24,3 +24,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

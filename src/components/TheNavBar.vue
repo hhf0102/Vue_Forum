@@ -1,12 +1,12 @@
 <template>
   <div class="mb-4">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-4">
-      <router-link :to="{name: 'PageHome'}" class="navbar-brand ml-4">LOGO</router-link>
+    <nav class="navbar navbar-expand-lg navbar-dark py-4">
+      <router-link :to="{name: 'PageHome'}" class="navbar-brand ml-5">LOGO</router-link>
       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> -->
-      <router-link :to="{name: 'PageProfile'}" class="user mr-4">
-        <img :src="user.avatar" alt="" width="50" height="50" class="userImg mr-3">
+      <router-link :to="{name: 'PageProfile'}" class="user mr-5">
+        <img :src="user.avatar" width="50" height="50" class="s_userAvatar mr-3">
         <h1 class="userName">{{user.name}}</h1>
       </router-link>
       <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -55,13 +55,13 @@ export default {
 nav {
   display: flex;
   justify-content: space-between;
+  background-color: $primary-color;
+  .navbar-brand {
+    font-size: 32px;
+  }
 }
 .user {
   display: flex;
-  text-decoration: none;
-  > .userImg {
-    border-radius: 50%;
-  }
   .userName {
     margin: 0;
     color: white;

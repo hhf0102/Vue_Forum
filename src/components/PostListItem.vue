@@ -1,17 +1,17 @@
 <template>
-  <div class="card mb-3">
+  <div class="card mb-3 s_postListItem">
     <div class="card-body">
-      <div class="userDetail">
-        <div class="userName text-center mb-2">{{user.name}}</div>
-        <div class="userAvatar text-center">
-          <img :src="user.avatar" alt="" width="130" height="130">
+      <div class="s_userDetail">
+        <div class="s_userName text-center mb-2">{{user.username}}</div>
+        <div class="text-center">
+          <img class="s_userAvatar" :src="user.avatar" alt="" width="130" height="130">
         </div>
-        <div class="threadsCount mt-3">{{userThreadsCount}} {{userThreadsCount === 1 ? 'thread' : 'threads'}}</div>
-        <div class="postsCount mt-2">{{userPostsCount}} {{userPostsCount === 1 ? 'post' : 'posts'}}</div>
+        <div class="s_threadsCount mt-3">{{userThreadsCount}} {{userThreadsCount === 1 ? 'thread' : 'threads'}}</div>
+        <div class="s_postsCount mt-2">{{userPostsCount}} {{userPostsCount === 1 ? 'post' : 'posts'}}</div>
       </div>
-      <div class="postContent">
-        <p>{{post.text}}</p>
-        <div class="datePostListItem">{{post.publishedAt | timesChange}}</div>
+      <div class="s_postContent">
+        <p class="s_text">{{post.text}}</p>
+        <div class="s_datePostListItem">{{post.publishedAt | timesChange}}</div>
       </div>
     </div>
   </div>
@@ -49,20 +49,33 @@ export default {
 .card-body {
   min-height: 300px;
   display: flex;
-  .userDetail {
-    text-align: center;
-    flex-basis: 20%;
+}
+.s_userDetail {
+  text-align: center;
+  flex-basis: 20%;
+  .s_userName {
+    font-size: 25px;
+    color: $primary-color;
   }
-  .postContent {
-    flex-basis: 80%;
+  .s_threadsCount {
+    font-size: 20px;
+  }
+  .s_postsCount {
+    font-size: 20px;
+  }
+}
+.s_postContent {
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+  .s_text {
+    font-size: 20px;
+  }
+  .s_datePostListItem {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    .datePostListItem {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-    }
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 }
 </style>

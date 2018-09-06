@@ -24,16 +24,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card-body {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  > * {
-    padding: 20px 20px;
-    flex: 1;
-    &:nth-child(even) {
-      background-color: rgba(73, 89, 96, .06);
-    }
-  }
-}
+
 </style>

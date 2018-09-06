@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Welcome to the Forum</h1>
+  <div class="s_pageHome">
+    <h1 class="mb-3">Welcome to the Forum</h1>
     <CategoryList :categories="categories"/>
   </div>
 </template>

@@ -1,11 +1,11 @@
 <template>
-  <div class="row">
-    <div class="col-4">
+  <div class="s_pageProfile">
+    <div class="s_profileCard mr-4">
       <UserProfileCard :user="user" v-if="!edit"/>
       <UserProfileCardEditor v-else :user="user"/>
     </div>
-    <div class="col-8">
-      <h2>{{user.username}}'s recent activity</h2>
+    <div class="s_postList">
+      <h2 class="mb-2">{{user.username}}'s recent activity</h2>
       <PostList :posts="posts"/>
     </div>
   </div>
@@ -44,3 +44,19 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.s_pageProfile {
+  display: flex;
+}
+.s_profileCard {
+  min-width: 350px;
+  margin-left: -80px;
+}
+.s_postList {
+  min-width: 900px;
+  h2 {
+    font-size: 32px;
+  }
+}
+</style>

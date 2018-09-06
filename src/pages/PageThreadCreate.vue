@@ -1,6 +1,6 @@
 <template>
-  <div class="PageThreadCreate">
-    <h1>Create new thread in <span>{{forum.name}}</span></h1>
+  <div class="s_PageThreadCreate">
+    <h1 class="mb-3">Create new thread in <span>{{forum.name}}</span></h1>
     <ThreadEditor :forumId="id"/>
   </div>
 </template>
@@ -26,9 +26,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  > span {
-    font-style: italic;
+.s_PageThreadCreate {
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    span {
+      font-style: italic;
+    }
   }
 }
 </style>

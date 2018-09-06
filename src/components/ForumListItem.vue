@@ -1,12 +1,12 @@
 <template>
-  <div class="forumListItem">
+  <div class="s_forumListItem">
     <div class="forumDetail">
-      <h5 class="card-title">
+      <h3 class="card-title mb-2">
         <router-link :to="{name: 'PageForum', params: {id: this.forum['.key']}}">{{forum.name}}</router-link>
-      </h5>
+      </h3>
       <p class="card-text">{{forum.description ? forum.description : 'No description.'}}</p>
     </div>
-    <div class="threadsCount"><div>{{threadsCount}}</div><span>{{threadsCount === 1 ? 'thread' : 'threads'}}</span></div>
+    <div class="threadsCount"><div class="countNum">{{threadsCount}}</div><span>{{threadsCount === 1 ? 'thread' : 'threads'}}</span></div>
   </div>
 </template>
 
@@ -30,17 +30,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.forumListItem {
+.s_forumListItem {
   display: flex;
   .forumDetail {
-    flex-basis: 60%;
+    flex-basis: 80%;
   }
   .threadsCount {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    > div {
+    text-align: center;
+    > .countNum {
       font-size: 30px;
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="create">
     <div class="form-group">
-      <textarea v-model="text" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+      <textarea v-model="text" class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
     </div>
     <button class="btn btn-primary mt-4 btn-lg btnSubmitPost">Submit post</button>
   </form>
@@ -39,6 +39,9 @@ form {
   flex-direction: column;
   .btnSubmitPost {
     align-self: flex-end;
+  }
+  textarea {
+    font-size: 24px;
   }
 }
 </style>

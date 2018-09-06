@@ -1,8 +1,8 @@
 <template>
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body s_threadListItem">
+    <h3 class="card-title mb-2">
       <router-link :to="{name: 'PageThread', params: {id: thread['.key']}}">{{thread.title}}</router-link>
-    </h5>
+    </h3>
     <p class="card-text">By {{user.name}}, {{thread.publishedAt | timesChange}}</p>
   </div>
 </template>
@@ -28,3 +28,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

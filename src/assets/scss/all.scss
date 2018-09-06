@@ -1,0 +1,49 @@
+@import 'reset';
+@import 'variables';
+@import 'extends';
+
+.card-header {
+  background-color: $primary-color;
+  padding: 15px;
+  font-size: 20px;
+  a {
+    color: white;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  width: 100%;
+  outline: none;
+  padding: 10px 10px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  resize: none;
+}
+
+input {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  outline: none;
+  height: 40px;
+}
+
+.s_userAvatar {
+  border-radius: 50%;
+}
+
+.s_forumListItem, .s_threadListItem, .s_postListItem, .s_userProfileCard, .s_userProfileCardEdit {
+  @extend %card-outline
+}
+
+.s_pageHome, .s_pageCategory, .s_pageForum, .s_pageThread {
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+}

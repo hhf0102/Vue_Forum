@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="s_pageForum">
     <div class="forumHeader mb-3">
       <div class="forumDetail">
         <h1>{{forum.name}}</h1>
         <h2>{{forum.description ? forum.description : 'No description.'}}</h2>
       </div>
-        <router-link :to="{name: 'PageThreadCreate', params: {id: this.forum['.key']}}" class="btnStartThread"><div class="btn btn-primary">Start a thread</div></router-link>
+        <router-link :to="{name: 'PageThreadCreate', params: {id: this.forum['.key']}}" class="btnStartThread"><button class="btn btn-primary">Start a thread</button></router-link>
     </div>
     <ThreadList :threads="threads"/>
   </div>

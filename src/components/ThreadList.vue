@@ -26,7 +26,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card > *:nth-child(odd) {
-  background-color: rgba(73, 89, 96, .06);
-}
+
 </style>

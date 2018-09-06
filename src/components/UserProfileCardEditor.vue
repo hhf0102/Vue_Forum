@@ -1,21 +1,21 @@
 <template>
-  <div class="userProfileCard">
-    <div class="card mb-5">
+  <div class="s_userProfileCardEdit">
+    <div class="card mb-3">
       <div class="card-body">
-        <div class="userImg">
-          <img :src="user.avatar" alt="">
+        <div class="s_userImg">
+          <img class="s_userAvatar" :src="user.avatar">
         </div>
-        <div class="userDetail mt-3">
+        <div class="s_userDetail mt-3">
           <input type="text" class="mb-3" v-model="editUser.username">
           <input type="text" class="mb-3" v-model="editUser.name">
           <div class="bio">
             <label for="bio">Bio:</label>
-            <textarea id="bio" cols="30" rows="10" v-model="editUser.bio"></textarea>
+            <textarea id="bio" cols="30" rows="5" v-model="editUser.bio"></textarea>
           </div>
         </div>
-        <div class="postsAndThreadsCount mt-5">
-          <div class="postsCount">{{userPostsCount}} {{userPostsCount === 1 ? 'post' : 'posts'}}</div>
-          <div class="threadsCount">{{userThreadsCount}} {{userThreadsCount === 1 ? 'thread' : 'threads'}}</div>
+        <div class="s_postsAndThreadsCount mt-5">
+          <div class="s_postsCount">{{userPostsCount}} {{userPostsCount === 1 ? 'post' : 'posts'}}</div>
+          <div class="s_threadsCount">{{userThreadsCount}} {{userThreadsCount === 1 ? 'thread' : 'threads'}}</div>
         </div>
         <div class="userContact mt-5">
           <div class="website mb-2">
@@ -31,9 +31,9 @@
             <input type="text" id="location" autocomplete="off" v-model="editUser.location">
           </div>
         </div>
-        <div class="btns">
-          <router-link :to="{name: 'PageProfile'}"><div class="btn btn-light btn-lg">Cancel</div></router-link>
-          <div @click="save" class="btn btn-primary btn-lg">Save</div>
+        <div class="btns mt-5">
+          <button @click="cancel" class="btn btn-light btn-lg">Cancel</button>
+          <button @click="save" class="btn btn-primary btn-lg">Save</button>
         </div>
       </div>
     </div>
@@ -65,51 +65,42 @@ export default {
     save () {
       this.$store.dispatch('updateProfile', this.editUser)
       this.$router.push({name: 'PageProfile'})
+    },
+    cancel () {
+      this.$router.push({name: 'PageProfile'})
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-input {
-  width: 100%;
-  height: 40px;
-  padding: 10px 10px;
+.s_userProfileCardEdit {
   border-radius: 5px;
-  outline: none;
-  border: 1px solid rgba(0, 0, 0, .2);
 }
-.userImg {
+.s_userImg {
   text-align: center;
   > img {
     width: 80%;
   }
 }
-.userDetail {
+.s_userDetail {
   .bio {
     display: flex;
     flex-direction: column;
     > label {
       font-size: 25px;
     }
-    textarea {
-      border-radius: 5px;
-      outline: none;
-      border: 1px solid rgba(0, 0, 0, .2);
-      height: 140px;
-      padding: 10px 10px;
-    }
   }
 }
-.postsAndThreadsCount {
+.s_postsAndThreadsCount {
   display: flex;
-  .postsCount {
+  .s_postsCount {
     flex-basis: 50%;
     font-size: 32px;
     font-weight: 200;
     text-align: center;
   }
-  .threadsCount {
+  .s_threadsCount {
     flex-basis: 50%;
     font-size: 32px;
     font-weight: 200;
@@ -119,7 +110,7 @@ input {
 .btns {
   display: flex;
   justify-content: space-between;
-  div {
+  > button {
     width: 100px;
   }
 }

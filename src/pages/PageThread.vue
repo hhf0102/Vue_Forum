@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="s_pageThread">
     <h1>{{thread.title}}</h1>
-    <h5 class="mt-2">By {{user.name}}, {{thread.publishedAt | timesChange}}</h5>
+    <h5 class="mt-2 mb-3">By {{user.name}}, {{thread.publishedAt | timesChange}}</h5>
     <PostList :posts="posts"/>
     <PostEditor :threadId="thread['.key']"/>
   </div>
